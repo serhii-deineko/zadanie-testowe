@@ -9,7 +9,6 @@ export default boot(({ app, router }) => {
     app.config.globalProperties.$env = {
         APP_URL: process.env.APP_URL,
         APP_NAME: process.env.APP_NAME,
-        APP_SLOGAN: process.env.APP_SLOGAN,
         APP_API_URL: process.env.APP_API_URL,
         SESSION_NAME: process.env.SESSION_NAME,
     };

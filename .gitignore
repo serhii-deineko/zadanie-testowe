@@ -15,10 +15,6 @@
 
 ## Files
 /backend/storage/*.key
-/backend/composer.lock
-/backend/.env
-/backend/.env.backup
-/backend/.env.production
 /backend/.phpunit.result.cache
 /backend/Homestead.json
 /backend/Homestead.yaml
@@ -63,7 +59,6 @@ yarn-error.log
 # Editor directories and files
 /package-lock.json
 /frontend/.idea
-/frontend/.env
 /frontend/*.suo
 /frontend/*.ntvs*
 /frontend/*.njsproj
