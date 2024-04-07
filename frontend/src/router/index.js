@@ -13,11 +13,6 @@ export default route(() => {
                 component: () => import("src/pages/Welcome.vue"),
             },
             {
-                path: "/:catchAll(.*)*",
-                component: () => import("pages/ErrorNotFound.vue"),
-            },
-
-            {
                 path: "/create-account",
                 name: "CreateNewAccount",
                 component: () => import("src/pages/auth/CreateNewAccount.vue"),
@@ -36,6 +31,10 @@ export default route(() => {
                 path: "/dashboard",
                 name: "Dashboard",
                 component: () => import("src/pages/user/Dashboard.vue"),
+            },
+            {
+                path: "/:catchAll(.*)*",
+                component: () => import("pages/ErrorNotFound.vue"),
             },
         ],
     });
