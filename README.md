@@ -6,7 +6,8 @@ Zadanie Testowe - 07.04.2024
 
 ## Demo / Login
 
--   <http://34.116.223.86>
+-   Demo <http://34.116.223.86>
+
     -   Email: admin@admin.com
     -   Password: admin
 
