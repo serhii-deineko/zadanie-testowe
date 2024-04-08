@@ -1,6 +1,7 @@
 "use strict";
 
 import { route } from "quasar/wrappers";
+import { userStore } from "src/stores/user";
 import { createRouter, createWebHistory } from "vue-router";
 
 export default route(() => {
@@ -11,6 +12,10 @@ export default route(() => {
                 path: "/",
                 name: "Welcome",
                 component: () => import("src/pages/Welcome.vue"),
+                beforeEnter: (to, from, next) => {
+                    if (userStore().access) next('/Dashboard');
+                    else next();
+                },
             },
             {
                 path: "/create-account",
@@ -31,6 +36,10 @@ export default route(() => {
                 path: "/dashboard",
                 name: "Dashboard",
                 component: () => import("src/pages/user/Dashboard.vue"),
+                beforeEnter: (to, from, next) => {
+                    if (!userStore().access) next('/');
+                    else next();
+                },
             },
             {
                 path: "/:catchAll(.*)*",
