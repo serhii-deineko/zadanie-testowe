@@ -21,16 +21,28 @@ export default route(() => {
                 path: "/create-account",
                 name: "CreateNewAccount",
                 component: () => import("src/pages/auth/CreateNewAccount.vue"),
+                beforeEnter: (to, from, next) => {
+                    if (userStore().access) next('/Dashboard');
+                    else next();
+                },
             },
             {
                 path: "/login",
                 name: "UserLogin",
                 component: () => import("src/pages/auth/UserLogin.vue"),
+                beforeEnter: (to, from, next) => {
+                    if (userStore().access) next('/Dashboard');
+                    else next();
+                },
             },
             {
                 path: "/settings",
                 name: "UserProfile",
                 component: () => import("src/pages/auth/UserProfile.vue"),
+                beforeEnter: (to, from, next) => {
+                    if (!userStore().access) next('/');
+                    else next();
+                },
             },
             {
                 path: "/dashboard",
