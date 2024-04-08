@@ -25,7 +25,12 @@ module.exports = configure(() => {
 
         devServer: {
             // https: true,
-            open: true,
+            hmr: {
+                host: "34.116.223.86",
+                clientPort: 80,
+                protocol: "ws",
+            },
+            open: false,
         },
 
         framework: {

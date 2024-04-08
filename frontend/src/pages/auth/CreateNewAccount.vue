@@ -26,7 +26,6 @@ import { ref } from "vue";
 import PageWrapper from "components/PageWrapper.vue";
 import CardWrapper from "components/CardWrapper.vue";
 import FormWrapper from "components/FormWrapper.vue";
-import { createAccount } from "src/apis/auth.js";
 import { regRules, passwordRequirements } from "src/modules/globals.js";
 
 export default {
@@ -60,7 +59,10 @@ export default {
 
                 // Create User
                 this.$toast.load();
-                const response = await createAccount(email, password);
+                const response = await this.$axios.post("/create-account", {
+                    email: email,
+                    password: password,
+                });
                 this.$toast.success(response.data.message);
                 this.$router.push("/login");
             } catch (error) {

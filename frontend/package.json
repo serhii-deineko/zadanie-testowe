@@ -2,7 +2,7 @@
     "name": "hrpanorama",
     "version": "1.0.0",
     "description": "Program do generowania kodu QR z tekstem wprowadzonym przez użytkownika",
-    "productName": "Landingpage",
+    "productName": "Zadanie Testowe",
     "author": "Serhii Deineko",
     "private": true,
     "scripts": {
