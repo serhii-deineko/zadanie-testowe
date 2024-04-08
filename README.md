@@ -4,6 +4,12 @@ Zadanie Testowe - 07.04.2024
 
 -   by Serhii Deineko <serhii.deineko@gmail.com>
 
+## Demo / Login
+
+-   <http://34.116.223.86>
+    -   Email: admin@admin.com
+    -   Password: admin
+
 ## Security / Dependencies Check
 
 -   go "/frontend":
